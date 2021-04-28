@@ -1,0 +1,73 @@
+/*Nav bar*/
+#basic-navbar-nav {
+    background: #f8f9fa;
+    z-index: 999;
+}
+
+.navBar {
+    height: 40px;
+    font-size: small;
+    /*align-content: center;*/
+    vertical-align: center;
+    padding: 0 10px;
+}
+
+.navbar-brand {
+    vertical-align: center;
+}
+
+.navbar-toggler {
+    padding: 0;
+    height: 30px;
+    width: 30px;
+}
+
+.form-inline {
+    display: block;
+}
+
+.navbar-toggler-icon {
+    height: 25px;
+    width: 25px;
+}
+
+/*Pepper Buttons*/
+.navCardImages {
+    opacity: 45%;
+}
+
+.imageCardsLarge {
+    max-width: 30%;
+    margin: 25px;
+}
+
+.imageCardsSmall {
+    max-width: 7%;
+    margin: 25px;
+}
+
+.buttonize {
+    cursor: pointer;
+    box-shadow: 0 5px 9px 0 lightgrey, 0 7px 22px 0 lightgrey;
+}
+
+.buttonize:hover {
+    /*border-color: orange;*/
+    /*border-width: 1px;*/
+    box-shadow: 0 5px 9px 0 lightgrey, 0 7px 22px 0 orange;
+}
+
+.buttonize:active {
+    box-shadow: 0 5px 9px 0 lightgrey, 0 7px 22px 0 #ffa500;
+}
+
+/*tables.js*/
+.table-header:hover {
+    background-color: #f3c66d;
+    cursor: pointer;
+}
+
+.form-warning {
+    font-size: x-small;
+    color: red;
+}

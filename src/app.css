@@ -1,0 +1,103 @@
+h1 {
+  color: green;
+}
+
+body {
+  text-align: center;
+  margin: auto;
+}
+
+.postButton {
+  background-image: linear-gradient(to top right, #17a2b8, #17B885);
+  padding: 15px;
+  height: 5vmax;
+  width: 5vmax;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 5px 9px 0 lightgrey, 0 7px 22px 0 lightgrey;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font: bold 80% Roboto, sans-serif;
+  text-align: center;
+  font-size: 0.9vw;
+  color: aliceblue;
+}
+
+.postButton2 {
+  background-image: linear-gradient(to top right, #17a2b8, #17B885);
+  padding: 15px;
+  height: 4vmax;
+  width: 4vmax;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 5px 9px 0 lightgrey, 0 7px 22px 0 lightgrey;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font: bold 80% Roboto, sans-serif;
+  text-align: center;
+  font-size: 1.4vw;
+  color: aliceblue;
+}
+
+button:hover {
+  background-image: linear-gradient(to top right, orange, #F1E4B3);
+}
+
+.woodWorkingPostCards {
+  padding: 20px;
+}
+
+.bannerImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.titleContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.titleBanner {
+  position: absolute;
+  font: bold 100% Roboto, sans-serif;
+  font-size: 25px;
+  transform: translate(50%, -100%);
+}
+
+.deleteButton {
+  height: 3.5vh;
+
+}
+
+.noBorder {
+  border: none;
+  margin: 8% 4px;
+  padding: 0;
+  /*float: right;*/
+}
+
+.modalBodyText {
+  text-align: left;
+}
+
+.cardScroll {
+  margin: 5px;
+  height: 250px;
+  overflow-y: scroll;
+  scrollbar-width: thin; /* Firefox */
+}
+.cardScroll::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.searchBox {
+  text-align: center;
+  padding: 0;
+  margin: 0 3px;
+  height: 22px;
+  font-size: small;
+}
