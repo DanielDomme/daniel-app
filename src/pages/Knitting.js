@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { func } from 'prop-types';
 import { Accordion } from 'react-bootstrap';
-import { YarnTable } from '../components/tables';
+import GenericTable from '../components/tables';
 import { Gallery } from '../components/gallery';
 
 export default class Knitting extends Component {
@@ -60,7 +60,7 @@ export default class Knitting extends Component {
       ],
       projectArray: [
         {
-          postTitle: 'First Project', bodyContent: 'I knitted', imageLocation: '../../../public/images/exampleKnitted.jpeg'
+          postTitle: 'First Project', bodyContent: 'I knitted', imageLocation: `${process.env.PUBLIC_URL}/images/exampleKnitted.jpeg`
         }
       ]
     };
@@ -90,7 +90,7 @@ export default class Knitting extends Component {
             <h3>Yarn Inventory</h3>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
-            <YarnTable
+            <GenericTable
               onDeleteButtonClick={this.onDeleteButtonClick}
               tableEntries={tableEntries}
               onEntryClick={this.onEntryClick}

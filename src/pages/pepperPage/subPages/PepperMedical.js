@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { MedicalTable } from '../../../components/tables';
 import './subPages.css';
 import {
   sortObjectArrayAscendingByAttribute,
@@ -7,6 +6,7 @@ import {
 } from '../../../utils/ObjectArraySortingUtil';
 import { PostButton } from '../../../components/buttons';
 import AddMedicalModal from '../../../components/AddMedicalModal';
+import GenericTable from '../../../components/tables';
 
 export default class PepperMedical extends Component {
   constructor(props) {
@@ -173,7 +173,7 @@ export default class PepperMedical extends Component {
     } = this.state;
     return (
       <div className="tableSpacing">
-        <MedicalTable
+        <GenericTable
           sortClickHandler={this.onSortClickHandler}
           onEntryClick={this.handleEntryClickToEdit}
           tableHeadersMap={tableHeadersMap}

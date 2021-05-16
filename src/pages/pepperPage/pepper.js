@@ -5,9 +5,11 @@ import pepperMedical from '../../resources/medicalPepper.png';
 import pepperAwards from '../../resources/awardsPepper.png';
 import pepperStats from '../../resources/busyPepper.png';
 import { ImageCardButton } from '../../components/buttons';
-import PepperGallery from './subPages/pepperGallery';
-import PepperMedical from './subPages/pepperMedical';
+import PepperGallery from './subPages/PepperGallery';
+import PepperMedical from './subPages/PepperMedical';
 import './subPages/subPages.css';
+import PepperStats from './subPages/PepperStats';
+import PepperShows from './subPages/PepperShows';
 
 export default class Pepper extends Component {
   constructor(props) {
@@ -16,6 +18,8 @@ export default class Pepper extends Component {
       shouldButtonsBeLarge: true,
       shouldPepperGalleryShow: false,
       shouldPepperMedicalShow: false,
+      shouldPepperStatsShow: false,
+      shouldPepperShowsShow: false
     };
   }
 
@@ -50,20 +54,28 @@ export default class Pepper extends Component {
     console.log('Medical Click');
   };
 
-  onAwardsClick = () => {
+  onShowsClick = () => {
     this.hideAllComponents();
+    this.setState({ shouldPepperShowsShow: true });
     this.alternateButtonSize();
     console.log('Awards Click');
   }
 
   onStatsClick = () => {
     this.hideAllComponents();
+    this.setState({ shouldPepperStatsShow: true });
     this.alternateButtonSize();
     console.log('Stats Click');
   }
 
   render() {
-    const { shouldButtonsBeLarge, shouldPepperGalleryShow, shouldPepperMedicalShow } = this.state;
+    const {
+      shouldButtonsBeLarge,
+      shouldPepperGalleryShow,
+      shouldPepperMedicalShow,
+      shouldPepperShowsShow,
+      shouldPepperStatsShow
+    } = this.state;
     return (
       <div>
         <h1 className="pepperH1">
@@ -75,11 +87,13 @@ export default class Pepper extends Component {
             <ImageCardButton buttonClickHandler={this.onMedicalClick} size={shouldButtonsBeLarge} buttonText="Medical" cardImage={pepperMedical} />
             {/* </div> */}
             {/* <div className="flex-row d-flex justify-content-center"> */}
-            <ImageCardButton buttonClickHandler={this.onAwardsClick} size={shouldButtonsBeLarge} buttonText="Shows" cardImage={pepperAwards} />
+            <ImageCardButton buttonClickHandler={this.onShowsClick} size={shouldButtonsBeLarge} buttonText="Shows" cardImage={pepperAwards} />
             <ImageCardButton buttonClickHandler={this.onStatsClick} size={shouldButtonsBeLarge} cardImage={pepperStats} buttonText="Stats" />
           </div>
           {shouldPepperGalleryShow ? <PepperGallery /> : null}
           {shouldPepperMedicalShow ? <PepperMedical /> : null}
+          {shouldPepperShowsShow ? <PepperShows /> : null}
+          {shouldPepperStatsShow ? <PepperStats /> : null}
         </div>
       </div>
     );
